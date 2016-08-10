@@ -1,0 +1,13 @@
+Sample Page  - Remote Assessment
+
+1. Deliverable for this assessment: ( HTML, CSS, JS, Images) + any 3rd party files
+2. Use any JS Graph library and let us know why you choose that.
+3. Use the given image slices.
+4. Do not use any CSS frameworks like bootstrap
+5. Use a simple templating library like Underscore or a framework like ReactJS or Angular
+
+Evaluation criteria for the direct interview:
+1. Best replication of the design.
+2. Modular coding and variable/function naming.
+3. Responsive code. (Minimal: Just for 3 media break points)
+4. Time taken to complete.

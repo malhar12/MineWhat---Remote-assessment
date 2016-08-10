@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Design-REDO</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" media="screen and (max-width: 504px)" href="public/css/master_0to500.css">
+	<link rel="stylesheet" media="screen and (min-width: 505px) and (max-width: 800px)" href="public/css/master_500to800.css">
+	<link rel="stylesheet" media="screen and (min-width: 801px)" href="public/css/master_800B.css">
+	<link rel="stylesheet" href="public/css/ionicons.css">
+	<script src="public/js/jquery-3.0.0.js"></script>
+	<script src="public/js/angular.js"></script>
+	<script src="public/js/Chart.js"></script>
+	<script src="public/js/app.js"></script>
+</head>
+<body ng-app="MainModule">
+	<div class="mainBody">
+		<div ng-controller="DivController as DivCtrl" class="divClass">
+			<header>
+				<div class="headerBlock">MY APPLICATION</div>
+				<div class="navBlock">SAMPLE PAGE</div>
+			</header>
+			<section class="containerDiv">
+				<div class="InsightDataDisplayStyle">
+					<h1 class="sourceRevenueHeadingStyle">REVENUE BY ACQUISITION SOURCE</h1>
+					<table class="acquisitionSourceTableStyle">					
+						<tr style="background-color: #c1c1c1">
+							<td colspan="2">
+								<div class="headerColumn1Style"><strong>Sources</strong></div>
+								<div class="headerColumn2Style"><strong>Revenue</strong></div>
+							</td>
+						</tr>
+						<tr ng-repeat="source in DivCtrl.sources" class="rowStyle">
+							<td colspan="2"><div class="SourceColumnStyle">{{source.name}}</div><div class="RevenueColumnStyle">{{source.value | currency:undefined:0}}</div></td>
+						</tr>
+					</table>
+				</div>
+				<div class="chartDisplayDivStyle">
+					<h1 class="chartHeadingStyle">DEVICE DISTRIBUTION</h1>
+					<div id="chartLegend" class="chartLegendStyle"></div>
+					<canvas id="doughnut"></canvas>	
+				</div>
+			</section>
+			<section>
+				<h1 class="horizontalSeparatorStyle">TOP PRODUCTS</h1>
+				<div ng-repeat="gallery in DivCtrl.gallery" class="productGalleryStyle">
+				
+						
+						<img ng-src="{{gallery.img}}" class="productImageStyle"/>
+						<div class="productNameStyle">{{gallery.name}}</div>
+						<div class="productInsight-1-Style">+{{gallery.viewCount}}</div><div class="productInsight-2-Style">Views {{gallery.daysCount}} days ago</div>
+						<table style="width: 100%; background-image: url('images/tile-bg.png'); border-top: 1px solid; table-layout: fixed; word-wrap: break-word">
+							<tr><td class="textAlignmentStyle">Views</td><td style="text-align: right"><strong>{{gallery.view}}</strong></td></tr>
+							<tr><td class="textAlignmentStyle">Purchases</td><td style="text-align: right"><strong>{{gallery.purchase}}</strong></td></tr>
+							<tr><td class="textAlignmentStyle">Conversion Rate</td><td style="text-align: right"><strong>{{gallery.conversion_rate | percentage}}</strong></td></tr>
+							<tr><td class="textAlignmentStyle">Revenue</td><td style="text-align: right"><strong>{{gallery.revenue | currency:undefined:0}}</strong></td></tr>
+						</table>	
+						<div class="numberingDivStyle">{{gallery.count}}</div>
+						<div class="icon ion-chevron-up iconStyle"></div>
+				</div>
+			</section>
+			<div class="footer"></div>
+		</div>
+	</div>
+</body>
+</html>

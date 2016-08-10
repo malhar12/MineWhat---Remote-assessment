@@ -1,0 +1,243 @@
+@font-face{font-family: Cyntho; font-weight: thin; src: url('../../CynthoPro-Regular.otf');}
+
+.mainBody{
+	width:100%;
+	height:100%;
+	position: absolute;
+}
+
+.divClass{
+	background-color: #FFFFFF;
+	font-family: Cyntho;
+	font-weight: thin;
+	font-size: 1.2vw;
+	width: 60%;
+	position: relative;
+	margin-left: 20%;
+	margin-right: 20%;
+	color: #797979;
+}
+
+.headerBlock{
+	background-color: #DB1627;
+	color: #FFFFFF;	
+	text-align: left;
+	width:100%;
+	height: 30px;
+	padding-left: 3%;
+	padding-right: 1.25%;
+	padding-top:1%;
+	padding-bottom: 3%;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	font-size: 2vw;
+}
+
+.navBlock{
+	background-color:#F2F0F2;
+	color:#808080;
+	width:100%;
+	height: 30px;
+	text-align: left;
+	padding-left: 3%;
+	padding-right: 1.25%;
+	padding-top: 1%;
+	padding-bottom: 3%;
+	box-sizing: border-box;
+	word-wrap: break-word;
+	font-size: 2vw;
+}
+
+.containerDiv{
+	width:100%;
+	margin-bottom: 55%;
+}
+
+.InsightDataDisplayStyle{
+	float: left;
+	
+	width:50%;  
+	height:350px;
+	padding-top: 5%;
+}
+
+.sourceRevenueHeadingStyle{
+	width: 100%;
+	text-align: left;
+	padding-left: 5.5%;
+	font-size: 2vw;
+}
+
+.acquisitionSourceTableStyle{
+	padding-left:5%;
+	width: 100%;
+	font-size: 1.6vw;
+	position: relative;
+	table-layout: fixed; 
+	word-wrap: break-word;
+}
+
+.headerColumn1Style{
+	float: left; 
+	text-align: left; 
+	background-color: #a9a9a9; 
+	width:50%;
+	font-size: 1.7vw;
+	box-sizing: border-box;
+	padding-top: 3%;
+	padding-left: 2%;
+	padding-bottom: 3%;
+	height: 25px;
+	color: #181818;
+}
+
+.headerColumn2Style{
+	float: right; 
+	text-align: center; 
+	background-color: #a9a9a9; 
+	width:50%;	
+	font-size: 1.7vw;
+	box-sizing: border-box;
+	padding-top: 3%;
+	padding-left: 2%;
+	padding-bottom: 3%;
+	height: 25px;
+	color: #181818;
+}
+
+.rowStyle{
+	background-color: #F2F0F2;
+}
+
+.SourceColumnStyle{
+	float: left; 
+	text-align: left; 
+	background-color: #F2F0F2; 
+	width:50%;
+	height: 35px;
+	box-sizing: border-box;
+	padding-top: 5%;
+	padding-left: 2%;
+	color: #797979;
+}
+
+.RevenueColumnStyle{
+	float: right; 
+	text-align: center; 
+	background-color: #F2F0F2; 
+	width:50%;	
+	height: 35px;
+	box-sizing: border-box;
+	padding-top: 5%;
+	padding-left: 2%;
+	color: #797979;
+}
+
+.chartDisplayDivStyle{
+	float: right;
+	
+	width:50%;  
+	height:350px;
+	padding-top: 5%;
+}
+
+.chartHeadingStyle{
+	width: 100%;
+	text-align: left;
+	padding-left: 8.5%;
+	font-size: 2vw;
+}
+
+.chartLegendStyle ul li span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+}
+
+.horizontalSeparatorStyle{
+	padding-left: 2.35%;
+	text-align: left;
+	font-size: 2vw;
+}
+
+.productGalleryStyle{
+	
+	z-index: 0;
+	float: left;
+	width: 21%;/*12+1+180.8+1=*/
+	width: calc(84% / 2);
+	font-size: 2vw;
+	border: 1px solid;
+	border-color: #808080;
+	margin-top: 3.40%;
+	margin-left: 2.35%;
+	margin-right: 1.05%;	
+	position: relative;
+}
+
+.productImageStyle{
+	width: 100%;
+	z-index: 0;
+	border-color: #808080;
+	position: relative;
+}
+
+.productNameStyle{
+	box-sizing: border-box;
+	padding-left: 2%;
+	padding-bottom: 2%;	
+	color: #a9a9a9;
+	word-wrap: break-word;
+}
+
+.productInsight-1-Style{
+	box-sizing: border-box;
+	color:#74dc87;
+	float: left;
+	padding-left: 2%;
+	padding-bottom: 2%;
+	word-wrap: break-word;
+}
+
+.productInsight-2-Style{
+	box-sizing: border-box;
+	float: left;
+	padding-left: 2px;
+	padding-bottom: 2%;
+	color: #a9a9a9;
+	word-wrap: break-word;
+}
+
+.textAlignmentStyle{
+	text-align: left;	
+	color: #a9a9a9;
+	word-wrap: break-word;
+}
+
+.numberingDivStyle{
+	position: absolute;
+	color: #484848;
+	top: 2%;
+	left: 1%;
+	float: left;
+	width: 10%;
+	height: 5%;
+	z-index: 0;
+	background-color: #d9d9d9;
+	margin-left: 10px;
+	text-align: center;
+	font-size: 2vw;
+	padding-top: 0.8%;
+}
+
+.iconStyle{
+	background-image: url('../../images/tile-bg.png');
+	box-sizing: border-box;
+	padding-left:45%;
+}
+
+.footer{
+	width: 100%;
+	height:10px;
+}
