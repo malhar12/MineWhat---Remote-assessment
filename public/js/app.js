@@ -7,15 +7,15 @@
 		
 		this.sources = sourceAcquisition;
 		this.gallery = galleryArray;
-		//alert(images);
 	});
-
+	//Custom filer to apply percentage sign at the end of a value
 	app.filter('percentage', ['$filter', function ($filter) {
 	  return function (input, decimals) {
 	    return $filter('number')(input, decimals) + '%';
 	  };
 	}]);
 
+	//Data for Source-Revenue table
 	var sourceAcquisition = [
 		{
 			name: 'FACEBOOK.COM',
@@ -48,6 +48,7 @@
 		}
 	];
 
+	//product gallery data
 	var galleryArray = [
 
 		{ view: 10989,
@@ -95,6 +96,7 @@
 		}
 	];
 
+	//Adding Chart to the html
 	$(document).ready(function(){
 			var chart = document.getElementById("doughnut");
 			var doughnutChart = new Chart(chart, {
@@ -121,8 +123,7 @@
 			var splitEle2 = innerHTMLEle.substring(21, innerHTMLEle.length);
 			var splitEle1 = "<ul style=\"list-style:none\">";
 			innerHTMLEle = splitEle1+splitEle2;
-			document.getElementById('chartLegend').innerHTML = innerHTMLEle;
-	});
 
-	
+			document.getElementById('chartLegend').innerHTML = innerHTMLEle;
+	});	
 })();

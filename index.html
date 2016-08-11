@@ -14,16 +14,18 @@
 	<script src="public/js/app.js"></script>
 </head>
 <body ng-app="MainModule">
-	<div class="mainBody">
-		<div ng-controller="DivController as DivCtrl" class="divClass">
+	<div id="mainContianer" class="mainBody">
+		<div id="centeredSubContainer" ng-controller="DivController as DivCtrl" class="divClass">
 			<header>
-				<div class="headerBlock">MY APPLICATION</div>
-				<div class="navBlock">SAMPLE PAGE</div>
+				<div id="headerDiv" class="headerBlock">MY APPLICATION</div>
+				<div id="navDiv" class="navBlock">SAMPLE PAGE</div>
 			</header>
-			<section class="containerDiv">
-				<div class="InsightDataDisplayStyle">
-					<h1 class="sourceRevenueHeadingStyle">REVENUE BY ACQUISITION SOURCE</h1>
-					<table class="acquisitionSourceTableStyle">					
+			<!-- Section with id="upperSection" contains the table to show revenue generated against a particular source data &
+			the device distribution chart as well-->
+			<section id="upperSection" class="containerDiv">
+				<div id="displayTableDiv" class="InsightDataDisplayStyle">
+					<h1 id="subHeader1" class="sourceRevenueHeadingStyle">REVENUE BY ACQUISITION SOURCE</h1>
+					<table id="sourceRevenueTable" class="acquisitionSourceTableStyle">					
 						<tr style="background-color: #c1c1c1">
 							<td colspan="2">
 								<div class="headerColumn1Style"><strong>Sources</strong></div>
@@ -35,31 +37,33 @@
 						</tr>
 					</table>
 				</div>
-				<div class="chartDisplayDivStyle">
-					<h1 class="chartHeadingStyle">DEVICE DISTRIBUTION</h1>
+				<div id="chartDisplayDiv" class="chartDisplayDivStyle">
+					<h1 id="subHeader2" class="chartHeadingStyle">DEVICE DISTRIBUTION</h1>
 					<div id="chartLegend" class="chartLegendStyle"></div>
 					<canvas id="doughnut"></canvas>	
 				</div>
 			</section>
-			<section>
-				<h1 class="horizontalSeparatorStyle">TOP PRODUCTS</h1>
-				<div ng-repeat="gallery in DivCtrl.gallery" class="productGalleryStyle">
+			<!-- Section with id="lowerSection" contains the most popular product items in a gallery with information such as 
+			how many times these items have been viewed, item name and other details-->
+			<section id="lowerSection">
+				<h1 id="subHeader3" class="horizontalSeparatorStyle">TOP PRODUCTS</h1>
+				<div id="productGalleryDiv" ng-repeat="gallery in DivCtrl.gallery" class="productGalleryStyle">
 				
 						
-						<img ng-src="{{gallery.img}}" class="productImageStyle"/>
-						<div class="productNameStyle">{{gallery.name}}</div>
-						<div class="productInsight-1-Style">+{{gallery.viewCount}}</div><div class="productInsight-2-Style">Views {{gallery.daysCount}} days ago</div>
-						<table style="width: 100%; background-image: url('images/tile-bg.png'); border-top: 1px solid; table-layout: fixed; word-wrap: break-word">
+						<img id="productImage" ng-src="{{gallery.img}}" class="productImageStyle"/>
+						<div id="productNameDiv" class="productNameStyle">{{gallery.name}}</div>
+						<div id="productInsight-1-Div" class="productInsight-1-Style">+{{gallery.viewCount}}</div><div id="productInsight-2-Div" class="productInsight-2-Style">Views {{gallery.daysCount}} days ago</div>
+						<table id="productGalleryTable" style="width: 100%; background-image: url('images/tile-bg.png'); border-top: 1px solid; table-layout: fixed; word-wrap: break-word">
 							<tr><td class="textAlignmentStyle">Views</td><td style="text-align: right"><strong>{{gallery.view}}</strong></td></tr>
 							<tr><td class="textAlignmentStyle">Purchases</td><td style="text-align: right"><strong>{{gallery.purchase}}</strong></td></tr>
 							<tr><td class="textAlignmentStyle">Conversion Rate</td><td style="text-align: right"><strong>{{gallery.conversion_rate | percentage}}</strong></td></tr>
 							<tr><td class="textAlignmentStyle">Revenue</td><td style="text-align: right"><strong>{{gallery.revenue | currency:undefined:0}}</strong></td></tr>
 						</table>	
-						<div class="numberingDivStyle">{{gallery.count}}</div>
-						<div class="icon ion-chevron-up iconStyle"></div>
+						<div id="counterDiv" class="numberingDivStyle">{{gallery.count}}</div>
+						<div id="iconDiv" class="icon ion-chevron-up iconStyle"></div>
 				</div>
 			</section>
-			<div class="footer"></div>
+			<div id="footerDiv" class="footer"></div>
 		</div>
 	</div>
 </body>
